@@ -1,0 +1,42 @@
+function zoomin() {
+    var queszoom = document.getElementById("question");
+    var currHeight = queszoom.clientHeight;
+    queszoom.style.height = (currHeight + 40) + "px";
+    //increase fontsize
+    txt = document.getElementById('question');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + 20) + 'px';
+    //option container size increase
+    var optionzoom = document.getElementsByClassName("option");
+    var currHeight = optionzoom.clientHeight;
+    optionzoom.style.height = (currHeight + 40) + "px";
+    //option size increase
+    txt = document.getElementsByClassName('option');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + 20) + 'px';
+    
+}
+// function increaseFontSizeBy100px() {
+//     txt = document.getElementById('a');
+//     style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+//     currentSize = parseFloat(style);
+//     txt.style.fontSize = (currentSize + 100) + 'px';
+// }
+function zoomout() {
+    var queszoom = document.getElementById("question");
+    var currHeight = queszoom.clientHeight;
+    queszoom.style.height = (currHeight - 40) + "px";
+    txt = document.getElementById('question');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize - 20) + 'px';
+    var optionzoom = document.getElementsByClassName("option");
+    var currHeight = optionzoom.clientHeight;
+    optionzoom.style.height = (currHeight - 40) + "px";
+    txt = document.getElementsByClassName('option');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize - 20) + 'px';
+}
